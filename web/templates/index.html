@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Title</title>
+</head>
+<body>
+    <form action={{url_for("revice")}} method="post">
+    <img src={{path}} alt=""> <br>
+    <input type="hidden" name="img" value={{path[-38:-4]}}> <br>
+    <input type="submit" name="ans" value="A" style="width: 200px;height: 50px;"> <br>
+    <input type="submit" name="ans" value="B" style="width: 200px;height: 50px;"> <br>
+    <input type="submit" name="ans" value="C" style="width: 200px;height: 50px;"> <br>
+    <input type="submit" name="ans" value="D" style="width: 200px;height: 50px;"> <br>
+    </form>
+</body>
+</html>

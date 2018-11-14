@@ -29,13 +29,4 @@ class Update_md5(object):
         os.remove("./pic/"+self.filename)
 
 if __name__ == '__main__':
-    db = Mysql_db()
-    while(True):
-        results = db.query("SELECT ans_img FROM `1` WHERE  img_md5 IS NULL LIMIT 100;")
-        if results:
-            for result in results:
-                print(result[0])
-                md5 = Update_md5(result[0]).getFileMD5()
-                db.query("UPDATE `1` SET img_md5='{}' WHERE ans_img='{}'".format(md5, result[0]))
-        else:
-            exit()
+    print(Update_md5("https://i1.hdslb.com/bfs/member/6d1962845f9e37de4066e645e8a2f03b.jpg").getFileMD5())
